@@ -867,6 +867,89 @@ nav .mainMenu .closeMenu {
 
 }
 
+/* DESKTOP NAV: keep links, icons and BOOK NOW on one line */
+@media screen and (min-width: 751px) {
+    .navlink .mainMenu {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 0 40px 0 0;
+        padding: 0;
+    }
+
+    .navlink .mainMenu li {
+        white-space: nowrap;
+    }
+
+    .navlink .icons {
+        display: flex;
+        align-items: center;
+        margin: 0 10px;
+    }
+
+    .navlink .book-now {
+        display: inline-block;
+        font-size: 18px;
+        padding: 10px 22px;
+        margin-left: 10px;
+    }
+
+    .navlink .book-now::after {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1101px) and (max-width: 1400px) {
+    .logo {
+        width: 240px;
+    }
+
+    .navlink .mainMenu {
+        margin-right: 24px;
+    }
+
+    .navlink .mainMenu li {
+        margin: 0 7px;
+        font-size: 17px;
+    }
+
+    .navlink .icons i {
+        padding-left: 10px;
+    }
+
+    .navlink .book-now {
+        font-size: 16px;
+        padding: 9px 18px;
+    }
+}
+
+@media screen and (min-width: 751px) and (max-width: 1100px) {
+    .logo {
+        width: 170px;
+        margin-left: 20px;
+    }
+
+    .navlink .mainMenu {
+        margin-right: 16px;
+    }
+
+    .navlink .mainMenu li {
+        margin: 0 4px;
+        padding: 4px;
+        font-size: 13px;
+    }
+
+    .navlink .icons {
+        display: none;
+    }
+
+    .navlink .book-now {
+        font-size: 13px;
+        padding: 8px 12px;
+        margin-left: 4px;
+    }
+}
+
 /* MEDIA QUERY FOR PRINT */
 @media print{
     body{

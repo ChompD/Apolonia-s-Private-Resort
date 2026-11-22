@@ -14,7 +14,7 @@ A multi-page website for **Apolonia's Private Resort**, a family-run private poo
 | **About** | The resort's story, what makes it good for gatherings, and where to find it |
 | **Activities** | Campfire, slides, swings, volleyball, karaoke and basketball, in alternating photo-and-text rows |
 | **Rooms & Rates** | Room 1, Room 2, master bedroom, living room, kitchen and outside room, plus a rates menu and function hall info |
-| **Contact** | An inquiry form (with package, preferred date and number of guests), the resort's email, Facebook and address, and an embedded Google Map |
+| **Contact** | An availability calendar (Google Calendar, free/busy only), an inquiry form (with package, preferred date and number of guests), the resort's email, Facebook and address, and an embedded Google Map |
 
 ## Design
 
@@ -28,6 +28,7 @@ A classic resort look: Playfair Display serif headlines with Montserrat for body
 - **Scroll animations:** sections fade in as they come into view, and are turned off for visitors who prefer reduced motion.
 - **Captioned video:** the home page video has an English WebVTT caption track (`media/mimavideo.vtt`).
 - **Embedded Google Map** on the Contact page.
+- **Availability calendar** on the Contact page: a public Google Calendar that shows only which dates are busy (month view on desktop, list view on phones). See [Turning on the availability calendar](#turning-on-the-availability-calendar).
 - **Contact form opens a prefilled email** to the resort, after checking that name, email and message are filled in.
 - **Accessible markup:** labelled form fields, real buttons for the menu, a skip link and visible focus outlines.
 
@@ -54,6 +55,16 @@ python -m http.server 8000
 ```
 
 Then go to http://localhost:8000.
+
+## Turning on the availability calendar
+
+Until a calendar is connected, the Contact page shows a short "ask us about your date" message in its place.
+
+1. In the resort's Google account, create a separate calendar just for bookings (for example, "Apolonia's bookings"), so no personal events end up on it.
+2. Open **Settings** → that calendar → **Access permissions for events**, tick **Make available to public**, and choose **See only free/busy (hide details)**. The website will then only ever show "busy", never names or event details.
+3. Under **Integrate calendar**, copy the **Calendar ID**.
+4. In `contact.html`, paste the ID into `data-calendar-id=""` in the Check availability section.
+5. From then on, add each booking to that calendar as an event, and the date shows as busy on the site.
 
 ## Project structure
 

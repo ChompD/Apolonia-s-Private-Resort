@@ -65,6 +65,37 @@ document.querySelectorAll('input[type="date"]').forEach((input) => {
     input.min = todayValue;
 });
 
+// ---------- Availability calendar (contact page) ----------
+// Loads the public Google Calendar once its ID is filled in on the page.
+// Month view on wider screens, agenda list on phones.
+const calendarBox = document.querySelector('[data-calendar-id]');
+const calendarId = calendarBox ? calendarBox.dataset.calendarId.trim() : '';
+
+if (calendarId) {
+    const phone = window.matchMedia('(max-width: 640px)');
+    const iframe = document.createElement('iframe');
+    iframe.title = 'Availability calendar';
+    iframe.loading = 'lazy';
+
+    const setCalendarView = () => {
+        const params = new URLSearchParams({
+            src: calendarId,
+            ctz: 'Asia/Manila',
+            mode: phone.matches ? 'AGENDA' : 'MONTH',
+            showTitle: '0',
+            showPrint: '0',
+            showTabs: '0',
+            showCalendars: '0',
+            showTz: '0',
+        });
+        iframe.src = 'https://calendar.google.com/calendar/embed?' + params.toString();
+    };
+
+    setCalendarView();
+    phone.addEventListener('change', setCalendarView);
+    calendarBox.replaceChildren(iframe);
+}
+
 // ---------- Contact form ----------
 const form = document.getElementById('contact-form');
 

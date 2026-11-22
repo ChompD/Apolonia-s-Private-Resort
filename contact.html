@@ -69,7 +69,27 @@
                 </div>
             </section>
 
-            <section class="section">
+            <!-- Availability: public Google Calendar in free/busy mode.
+                 To turn it on, paste the calendar's ID into data-calendar-id below
+                 (Google Calendar → Settings → the calendar → "Integrate calendar" → Calendar ID).
+                 Until then, visitors see the message inside the box instead. -->
+            <section class="section" id="availability">
+                <div class="container">
+                    <div class="center-head reveal">
+                        <h2 class="section-title">Check availability</h2>
+                        <span class="subtitle">Dates marked busy are already booked</span>
+                    </div>
+                    <div class="frame-single frame-calendar reveal" data-calendar-id="">
+                        <div class="calendar-fallback">
+                            <p>Our availability calendar is coming soon. For now, send us your preferred date and we'll let you know if it's free.</p>
+                            <a class="btn" href="#inquiry">Ask about a date</a>
+                        </div>
+                    </div>
+                    <p class="calendar-note reveal">Dates are only confirmed once we reply to your inquiry.</p>
+                </div>
+            </section>
+
+            <section class="section section--paper" id="inquiry">
                 <span class="watermark" aria-hidden="true">Hello</span>
                 <div class="container contact-layout">
                     <div class="reveal">
@@ -150,7 +170,7 @@
                 </div>
             </section>
 
-            <section class="section section--paper" id="map">
+            <section class="section" id="map">
                 <div class="container">
                     <div class="center-head reveal">
                         <h2 class="section-title">Find us</h2>

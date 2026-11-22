@@ -1,78 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
     <head>
-        <title>Apolonia's Private Resort</title>
-        <meta charset = "utf-8" />
-        <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Come and enjoy your days with Apolonia's Resort with our relaxing scene and pool"/>
-        <link rel = "stylesheet" href = "style.css" type = "text/css" />
-        <link rel="shortcut icon" href="images/icon.ico"/>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-        <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Contact &amp; Booking | Apolonia's Private Resort</title>
+        <meta name="description" content="Book a day swim or overnight stay at Apolonia's Private Resort, or send us your questions. Find us in Barangay Cuayan, Angeles City." />
+        <meta name="theme-color" content="#0c4c57" />
+
+        <link rel="icon" href="images/icon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" />
+        <script>document.documentElement.classList.remove('no-js');</script>
+        <script src="main.js" defer></script>
     </head>
 
     <body>
-        <!-- Navigation bar and background -->
-        <img src="images/about.jpg" alt="background-pic" class="background">
-        <nav class="navlink">
-            <a href="index.html"><img class="logo" alt="Apolonia's Private Resort Logo" src="images/logo.png"/></a>
+        <a class="skip-link" href="#main">Skip to content</a>
 
-            <!-- Start of hamburger -->
-            <div class="openMenu"><i class="fa fa-bars"></i></div>
-            <ul class="mainMenu">
-                <li><a href = "index.html">HOME</a></li>
-                <li><a href = "about.html">ABOUT US</a></li>
-                <li><a href = "activities.html">ACTIVITIES</a></li>
-                <li><a href = "rooms.html">ROOMS</a></li>
-                <li><a href = "contact.html">CONTACT US</a></li>
-                <span class="icons">
-                    <a href="https://www.facebook.com/apoloniasprivatepool" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </span>
-                <li><a href = "contact.html" class="book-now">BOOK NOW</a></li>
-                <div class="closeMenu"><i class="fa fa-times"></i></div>
+        <!-- Header: links split around a centered logo -->
+        <header class="site-header">
+            <nav class="nav-bar" aria-label="Main">
+                <div class="nav-side nav-left">
+                    <div class="nav-social">
+                        <a href="https://www.facebook.com/apoloniasprivatepool" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                    </ul>
+                </div>
+                <a class="brand" href="index.html"><img src="images/logo.png" alt="Apolonia's Private Resort home" /></a>
+                <div class="nav-side nav-right">
+                    <ul class="nav-links">
+                        <li><a href="rooms.html">Rooms &amp; Rates</a></li>
+                        <li><a href="contact.html" aria-current="page">Contact</a></li>
+                    </ul>
+                    <a class="btn btn-line" href="contact.html">Book now</a>
+                </div>
+                <button class="menu-toggle" type="button" aria-label="Open menu" aria-controls="drawer" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            </nav>
+        </header>
+
+        <!-- Phone / tablet menu -->
+        <div class="drawer-backdrop"></div>
+        <nav class="drawer" id="drawer" aria-label="Menu">
+            <button class="drawer-close" type="button" aria-label="Close menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="rooms.html">Rooms &amp; Rates</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
+            <div><a class="btn" href="contact.html">Book now</a></div>
+            <a class="read-more" href="https://www.facebook.com/apoloniasprivatepool" target="_blank" rel="noopener">Facebook</a>
         </nav>
 
-        <!-- Main content -->
-
-        <div class="contact">
-            <h2>Any further questions? Contact us today.</h2>
-            <p>Get in touch with us by filling this form below</p>
-            <div class="form-container">
-                <form>
-                    <input name="name" placeholder="NAME" type="text"/>
-                    <input name="email" placeholder="E-MAIL" type="email"/>
-                    <input name="contact" placeholder="CONTACT NO" type="text"/>
-                    <input name="subject" placeholder="SUBJECT" type="text"/>
-                    <textarea name="message" placeholder="MESSAGE" rows="5"></textarea>
-                    <button type="submit">SUBMIT</button>
-                </form>
-            </div>
-            
-            <div class="contact-info">
-                <a href="mailto:Apoloniasresort@gmail.com">Apoloniasresort@gmail.com</a>
-            </div>
-
-            <div class="map" id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1727.7934889496305!2d120.5371715294983!3d15.149135262386755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f33d44f11f97%3A0xb4b4edf59c873b47!2sApolonia&#39;s%20Private%20Pool!5e1!3m2!1sen!2sph!4v1729084526259!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                <div class="icons-map">
-                    <a href="https://www.facebook.com/apoloniasprivatepool" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+        <main id="main">
+            <section class="page-hero torn-bottom">
+                <img src="images/about.jpg" alt="" />
+                <div>
+                    <h1>Contact Us</h1>
+                    <p>Any further questions? Contact us today.</p>
                 </div>
-                
-            </div>
+            </section>
+
+            <section class="section">
+                <span class="watermark" aria-hidden="true">Hello</span>
+                <div class="container contact-layout">
+                    <div class="reveal">
+                        <h2 class="section-title">Send an inquiry</h2>
+                        <span class="subtitle">Get in touch with us by filling in the form below</span>
+                        <form id="contact-form" novalidate>
+                            <div class="form-grid">
+                                <div class="field">
+                                    <label for="name">Name <span class="req" aria-hidden="true">*</span></label>
+                                    <input id="name" name="name" type="text" autocomplete="name" required />
+                                </div>
+                                <div class="field">
+                                    <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+                                    <input id="email" name="email" type="email" autocomplete="email" required />
+                                </div>
+                                <div class="field">
+                                    <label for="contact">Contact no.</label>
+                                    <input id="contact" name="contact" type="tel" autocomplete="tel" inputmode="tel" />
+                                </div>
+                                <div class="field">
+                                    <label for="package">Package</label>
+                                    <select id="package" name="package">
+                                        <option value="">Not sure yet</option>
+                                        <option>Day swimming</option>
+                                        <option>Overnight</option>
+                                        <option>Day swimming + function hall</option>
+                                        <option>Overnight + function hall</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <label for="date">Preferred date</label>
+                                    <input id="date" name="date" type="date" />
+                                </div>
+                                <div class="field">
+                                    <label for="guests">Number of guests</label>
+                                    <input id="guests" name="guests" type="number" min="1" inputmode="numeric" />
+                                </div>
+                                <div class="field field-full">
+                                    <label for="subject">Subject</label>
+                                    <input id="subject" name="subject" type="text" />
+                                </div>
+                                <div class="field field-full">
+                                    <label for="message">Message <span class="req" aria-hidden="true">*</span></label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button class="btn" type="submit">Send message</button>
+                                <p class="form-note">This opens your email app with your message ready to send.</p>
+                            </div>
+                            <p class="form-status" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+
+                    <aside class="reveal">
+                        <div class="info-block">
+                            <span class="label">Email</span>
+                            <a href="mailto:Apoloniasresort@gmail.com">Apoloniasresort@gmail.com</a>
+                        </div>
+                        <div class="info-block">
+                            <span class="label">Facebook</span>
+                            <a href="https://www.facebook.com/apoloniasprivatepool" target="_blank" rel="noopener">Apolonia's Private Pool</a>
+                        </div>
+                        <div class="info-block">
+                            <span class="label">Address</span>
+                            <a href="#map">Purok 5, Barangay Cuayan,<br />Angeles City, Pampanga</a>
+                        </div>
+                        <div class="tip-box">
+                            <span class="label">For a faster reply, include</span>
+                            <ul>
+                                <li>Your preferred date</li>
+                                <li>Day swim or overnight</li>
+                                <li>Number of guests</li>
+                                <li>Whether you need the function hall</li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="section section--paper" id="map">
+                <div class="container">
+                    <div class="center-head reveal">
+                        <h2 class="section-title">Find us</h2>
+                        <span class="subtitle">Purok 5, Barangay Cuayan, Angeles City, Pampanga</span>
+                    </div>
+                    <figure class="frame-single frame-map wide reveal">
+                        <iframe title="Map showing Apolonia's Private Pool" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1727.7934889496305!2d120.5371715294983!3d15.149135262386755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3396f33d44f11f97%3A0xb4b4edf59c873b47!2sApolonia&#39;s%20Private%20Pool!5e1!3m2!1sen!2sph!4v1729084526259!5m2!1sen!2sph" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </figure>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <div class="footer-wrap">
+            <a class="footer-badge" href="index.html"><img src="images/logo.png" alt="Apolonia's Private Resort home" loading="lazy" /></a>
+            <footer class="site-footer torn-top">
+                <div class="container footer-grid">
+                    <div>
+                        <span class="label">Contact Apolonia's</span>
+                        <p><strong>Apolonia's Private Resort</strong><br />Purok 5, Barangay Cuayan<br />Angeles City, Pampanga<br /><a class="accent" href="mailto:Apoloniasresort@gmail.com">Apoloniasresort@gmail.com</a></p>
+                        <p>Find our location on<br /><a class="accent" href="contact.html#map">Google Maps</a></p>
+                    </div>
+                    <div>
+                        <span class="label">The resort</span>
+                        <ul>
+                            <li><a href="about.html">About us</a></li>
+                            <li><a href="activities.html">Activities</a></li>
+                            <li><a href="rooms.html">Rooms</a></li>
+                            <li><a href="index.html#tour">Video tour</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="label">Packages</span>
+                        <ul>
+                            <li><a href="rooms.html#rates">Day swimming</a></li>
+                            <li><a href="rooms.html#rates">Overnight</a></li>
+                            <li><a href="rooms.html#event">Function hall</a></li>
+                            <li><a href="contact.html">Book now</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <span class="label">Follow us</span>
+                        <ul>
+                            <li><a href="https://www.facebook.com/apoloniasprivatepool" target="_blank" rel="noopener"><i class="fab fa-facebook-f" aria-hidden="true"></i>&nbsp; Facebook</a></li>
+                            <li><a href="mailto:Apoloniasresort@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i>&nbsp; Email us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container footer-bottom">
+                    <p>&copy; 2024 All rights reserved by <strong>Apolonia's Private Resort</strong>. Created by Dexter Toribio.</p>
+                </div>
+            </footer>
         </div>
-        <footer class="contact-footer">
-            <p> &copy; Copyright 2024. All rights reserved. Created by Dexter Toribio</p>
-            <a href="index.html"><p>apoloniaresort.com</p></a>
-        </footer>
     </body>
-
-   
-    <script src="main.js"></script>
-
 </html>

@@ -10,19 +10,26 @@ A multi-page website for **Apolonia's Private Resort**, a family-run private poo
 
 | Page | What's on it |
 | --- | --- |
-| **Home** | Welcome banner, links to Activities, Rooms and About Us, and a resort video with English captions |
-| **About Us** | The resort's history and an embedded Google Map of its location |
-| **Activities** | Campfire, slides, swings, volleyball, karaoke and basketball, each with a photo |
-| **Rooms** | Room 1, Room 2, master bedroom, living room, kitchen and outside room, plus a rates table for day swimming and overnight stays |
-| **Contact Us** | An inquiry form (name, email, contact number, subject, message) and the resort's email |
+| **Home** | Full-screen photo banner, a booking strip (date, package, guests) that fills in the contact form, the resort's story, an activities band, rooms, quick questions, the captioned video tour, a map and a closing quote |
+| **About** | The resort's story, what makes it good for gatherings, and where to find it |
+| **Activities** | Campfire, slides, swings, volleyball, karaoke and basketball, in alternating photo-and-text rows |
+| **Rooms & Rates** | Room 1, Room 2, master bedroom, living room, kitchen and outside room, plus a rates menu and function hall info |
+| **Contact** | An inquiry form (with package, preferred date and number of guests), the resort's email, Facebook and address, and an embedded Google Map |
+
+## Design
+
+A classic resort look: Playfair Display serif headlines with Montserrat for body text, teal and deep-teal accents on white and warm beige paper. Sections are separated by torn-paper edges, photos sit on offset teal blocks, and large faded words run down the side of some sections. The navigation stays at the top, with the links split around a centered logo.
 
 ## Features
 
-- **Responsive layout** with breakpoints for phones (up to 750px), tablets (750–1024px) and desktops, plus print styles.
-- **Hamburger menu on phones**, opened and closed with a few lines of JavaScript (`main.js`).
+- **Responsive layout** that adapts from phones to wide desktops (main breakpoints at 1180px, 960px and 640px), plus print styles.
+- **Fixed header** with links split around a centered logo; it turns solid on scroll, and becomes a slide-in menu on phones and tablets (closes on Escape, link tap or tapping outside).
+- **Booking strip** on the home page that carries the chosen date, package and guest count into the contact form.
+- **Scroll animations:** sections fade in as they come into view, and are turned off for visitors who prefer reduced motion.
 - **Captioned video:** the home page video has an English WebVTT caption track (`media/mimavideo.vtt`).
-- **Embedded Google Map** on the About Us page.
-- **Social links and a "Book Now" button** in the navigation bar on every page.
+- **Embedded Google Map** on the Contact page.
+- **Contact form opens a prefilled email** to the resort, after checking that name, email and message are filled in.
+- **Accessible markup:** labelled form fields, real buttons for the menu, a skip link and visible focus outlines.
 
 | Activities page | On a phone |
 | --- | --- |
@@ -33,7 +40,7 @@ A multi-page website for **Apolonia's Private Resort**, a family-run private poo
 - HTML5 and CSS3
 - Vanilla JavaScript
 - [Font Awesome](https://fontawesome.com/) icons
-- Google Fonts and Google Maps embed
+- Google Fonts (Playfair Display and Montserrat) and Google Maps embed
 - Hosted on GitHub Pages
 
 ## Run it locally
@@ -52,12 +59,12 @@ Then go to http://localhost:8000.
 
 ```
 ├── index.html        Home
-├── about.html        About Us + map
+├── about.html        About
 ├── activities.html   Activities
-├── rooms.html        Rooms + rates
-├── contact.html      Contact form
+├── rooms.html        Rooms & rates
+├── contact.html      Contact form + map
 ├── style.css         All styles, including the responsive breakpoints
-├── main.js           Phone menu
+├── main.js           Menu, header, scroll animations and contact form
 ├── images/           Photos, logo and icons
 ├── videos/           Home page video
 └── media/            Video captions (WebVTT)
@@ -65,8 +72,7 @@ Then go to http://localhost:8000.
 
 ## Notes
 
-- The contact form is front-end only; it doesn't send messages yet.
-- The Twitter and Instagram icons are placeholders; only the Facebook link points to the resort's page.
+- The contact form has no backend; it opens the visitor's email app with the message ready to send to Apoloniasresort@gmail.com.
 - The home page video is by [Mima Kristine and Kaiden](https://www.facebook.com/mommykristineandkaiden) and is credited on the page.
 
 ## Author
